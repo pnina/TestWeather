@@ -42,12 +42,12 @@ const SearchBar = ({ props }) => {
 
     const onChangeHandle = async value => {
         console.log(value);
-        // const response = await fetch(
-        //     `${api.url}city/${value}`
-        // );
-        // const countries = await response.json();
+        const response = await fetch(
+            `${api.url}city/${value}`
+        );
+        const countries = await response.json();
 
-        const countries = [{ "key": 213225, "localizedName": "Jerusalem" }, { "key": 128752, "localizedName": "Jerusalen" }, { "key": 32864, "localizedName": "Jerusalen" }, { "key": 221483, "localizedName": "Jerusalem" }, { "key": 2305887, "localizedName": "Jerusalém" }, { "key": 2310187, "localizedName": "Jerusalém" }, { "key": 1376675, "localizedName": "Jerusalem" }, { "key": 3537004, "localizedName": "Jerusalem" }, { "key": 1062987, "localizedName": "Jerusalem" }, { "key": 2115414, "localizedName": "Jerusalem" }];
+        //const countries = [{ "key": 213225, "localizedName": "Jerusalem" }, { "key": 128752, "localizedName": "Jerusalen" }, { "key": 32864, "localizedName": "Jerusalen" }, { "key": 221483, "localizedName": "Jerusalem" }, { "key": 2305887, "localizedName": "Jerusalém" }, { "key": 2310187, "localizedName": "Jerusalém" }, { "key": 1376675, "localizedName": "Jerusalem" }, { "key": 3537004, "localizedName": "Jerusalem" }, { "key": 1062987, "localizedName": "Jerusalem" }, { "key": 2115414, "localizedName": "Jerusalem" }];
         let countries2 = [];
         countries.map(obj => {
             let rObj = {}
